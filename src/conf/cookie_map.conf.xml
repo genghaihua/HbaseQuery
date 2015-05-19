@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+<cookie_map>
+	<!-- true表示将radiusID作为userid输出，会启用IP查询radiusID服务，输出radiusID -->
+	<radius_server>false</radius_server>
+	<!-- 表示IP查询radiusID服务所在节点IP -->
+	<radius_service>http://192.168.10.130:9999/ipq?</radius_service>
+	<!-- 类型可以为"cookieID","baiduID", "taobaoID", "jdpin" -->
+	<userid_type>jdpin</userid_type>
+</cookie_map>
+</xml>

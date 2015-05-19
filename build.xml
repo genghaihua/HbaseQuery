@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="jar" name="HbaseQuery">
+	<property environment="env"/>
+	<property name="ECLIPSE_HOME" value="D:/eclipse/"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="target" value="1.7"/>
+	<property name="source" value="1.7"/>
+	<path id="HbaseQuery.classpath">
+		<pathelement location="bin"/>
+		<pathelement location="lib/com.sun.net.httpserver.jar"/>
+		<pathelement location="lib/log4j-1.2.17.jar"/>
+		<pathelement location="lib/slf4j-api-1.7.5.jar"/>
+		<pathelement location="lib/slf4j-log4j12.jar"/>
+		<pathelement location="lib/mytool.jar"/>
+		<pathelement location="hbase_std_lib/activation-1.1.jar"/>
+		<pathelement location="hbase_std_lib/asm-3.2.jar"/>
+		<pathelement location="hbase_std_lib/avro.jar"/>
+		<pathelement location="hbase_std_lib/commons-beanutils-1.7.0.jar"/>
+		<pathelement location="hbase_std_lib/commons-beanutils-core-1.8.0.jar"/>
+		<pathelement location="hbase_std_lib/commons-cli-1.2.jar"/>
+		<pathelement location="hbase_std_lib/commons-codec-1.7.jar"/>
+		<pathelement location="hbase_std_lib/commons-collections-3.2.1.jar"/>
+		<pathelement location="hbase_std_lib/commons-compress-1.4.1.jar"/>
+		<pathelement location="hbase_std_lib/commons-configuration-1.6.jar"/>
+		<pathelement location="hbase_std_lib/commons-daemon-1.0.3.jar"/>
+		<pathelement location="hbase_std_lib/commons-digester-1.8.jar"/>
+		<pathelement location="hbase_std_lib/commons-el-1.0.jar"/>
+		<pathelement location="hbase_std_lib/commons-httpclient-3.1.jar"/>
+		<pathelement location="hbase_std_lib/commons-io-2.4.jar"/>
+		<pathelement location="hbase_std_lib/commons-lang-2.6.jar"/>
+		<pathelement location="hbase_std_lib/commons-logging-1.1.1.jar"/>
+		<pathelement location="hbase_std_lib/commons-math-2.2.jar"/>
+		<pathelement location="hbase_std_lib/commons-math3-3.1.1.jar"/>
+		<pathelement location="hbase_std_lib/commons-net-3.1.jar"/>
+		<pathelement location="hbase_std_lib/core-3.1.1.jar"/>
+		<pathelement location="hbase_std_lib/dom4j-1.6.1.jar"/>
+		<pathelement location="hbase_std_lib/findbugs-annotations-1.3.9-1.jar"/>
+		<pathelement location="hbase_std_lib/guava-12.0.1.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-annotations.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-archives-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-auth-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-common-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-datajoin-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-distcp-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-extras-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-gridmix-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-hdfs-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-hdfs-nfs-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-mapreduce-client-app-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-mapreduce-client-common-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-mapreduce-client-core-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-mapreduce-client-hs-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-mapreduce-client-hs-plugins-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-mapreduce-client-jobclient-2.3.0-cdh5.0.0-tests.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-mapreduce-client-jobclient-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-mapreduce-client-shuffle-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-mapreduce-examples-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-rumen-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-sls-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-streaming-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-yarn-api-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-yarn-applications-distributedshell-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-yarn-applications-unmanaged-am-launcher-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-yarn-client-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-yarn-common-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-yarn-server-common-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-yarn-server-nodemanager-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-yarn-server-resourcemanager-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-yarn-server-tests-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hadoop-yarn-server-web-proxy-2.3.0-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hamcrest-core-1.1.jar"/>
+		<pathelement location="hbase_std_lib/hamcrest-core-1.3.jar"/>
+		<pathelement location="hbase_std_lib/hbase-client-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-common-0.96.1.1-cdh5.0.0-tests.jar"/>
+		<pathelement location="hbase_std_lib/hbase-common-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-examples-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-hadoop-compat-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-hadoop2-compat-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-it-0.96.1.1-cdh5.0.0-tests.jar"/>
+		<pathelement location="hbase_std_lib/hbase-it-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-prefix-tree-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-protocol-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-server-0.96.1.1-cdh5.0.0-tests.jar"/>
+		<pathelement location="hbase_std_lib/hbase-server-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-shell-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-testing-util-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/hbase-thrift-0.96.1.1-cdh5.0.0.jar"/>
+		<pathelement location="hbase_std_lib/high-scale-lib-1.1.1.jar"/>
+		<pathelement location="hbase_std_lib/hsqldb-1.8.0.10.jar"/>
+		<pathelement location="hbase_std_lib/htrace-core-2.01.jar"/>
+		<pathelement location="hbase_std_lib/httpclient-4.2.5.jar"/>
+		<pathelement location="hbase_std_lib/httpcore-4.2.5.jar"/>
+		<pathelement location="hbase_std_lib/jackson-core-asl-1.8.8.jar"/>
+		<pathelement location="hbase_std_lib/jackson-jaxrs-1.8.8.jar"/>
+		<pathelement location="hbase_std_lib/jackson-mapper-asl-1.8.8.jar"/>
+		<pathelement location="hbase_std_lib/jackson-xc-1.8.8.jar"/>
+		<pathelement location="hbase_std_lib/jamon-runtime-2.3.1.jar"/>
+		<pathelement location="hbase_std_lib/jasper-compiler-5.5.23.jar"/>
+		<pathelement location="hbase_std_lib/jasper-runtime-5.5.23.jar"/>
+		<pathelement location="hbase_std_lib/java-xmlbuilder-0.4.jar"/>
+		<pathelement location="hbase_std_lib/jaxb-api-2.1.jar"/>
+		<pathelement location="hbase_std_lib/jaxb-impl-2.2.3-1.jar"/>
+		<pathelement location="hbase_std_lib/jaxen-1.1.6.jar"/>
+		<pathelement location="hbase_std_lib/jersey-core-1.8.jar"/>
+		<pathelement location="hbase_std_lib/jersey-json-1.8.jar"/>
+		<pathelement location="hbase_std_lib/jersey-server-1.8.jar"/>
+		<pathelement location="hbase_std_lib/jets3t-0.9.0.jar"/>
+		<pathelement location="hbase_std_lib/jettison-1.3.1.jar"/>
+		<pathelement location="hbase_std_lib/jetty-6.1.26.cloudera.2.jar"/>
+		<pathelement location="hbase_std_lib/jetty-sslengine-6.1.26.cloudera.2.jar"/>
+		<pathelement location="hbase_std_lib/jetty-util-6.1.26.cloudera.2.jar"/>
+		<pathelement location="hbase_std_lib/jruby-complete-1.6.8.jar"/>
+		<pathelement location="hbase_std_lib/jsch-0.1.42.jar"/>
+		<pathelement location="hbase_std_lib/jsoup-1.7.3.jar"/>
+		<pathelement location="hbase_std_lib/jsp-2.1-6.1.14.jar"/>
+		<pathelement location="hbase_std_lib/jsp-api-2.1-6.1.14.jar"/>
+		<pathelement location="hbase_std_lib/jsp-api-2.1.jar"/>
+		<pathelement location="hbase_std_lib/jsr305-1.3.9.jar"/>
+		<pathelement location="hbase_std_lib/junit-4.11.jar"/>
+		<pathelement location="hbase_std_lib/libthrift-0.9.0.jar"/>
+		<pathelement location="hbase_std_lib/log4j-1.2.17.jar"/>
+		<pathelement location="hbase_std_lib/metrics-core-2.1.2.jar"/>
+		<pathelement location="hbase_std_lib/mytool.jar"/>
+		<pathelement location="hbase_std_lib/netty-3.6.6.Final.jar"/>
+		<pathelement location="hbase_std_lib/paranamer-2.3.jar"/>
+		<pathelement location="hbase_std_lib/protobuf-java-2.5.0.jar"/>
+		<pathelement location="hbase_std_lib/servlet-api-2.5-6.1.14.jar"/>
+		<pathelement location="hbase_std_lib/servlet-api-2.5.jar"/>
+		<pathelement location="hbase_std_lib/slf4j-api-1.7.5.jar"/>
+		<pathelement location="hbase_std_lib/snappy-java-1.0.4.1.jar"/>
+		<pathelement location="hbase_std_lib/stax-api-1.0.1.jar"/>
+		<pathelement location="hbase_std_lib/xmlenc-0.52.jar"/>
+		<pathelement location="hbase_std_lib/xz-1.0.jar"/>
+		<pathelement location="hbase_std_lib/zookeeper.jar"/>
+	</path>
+	<target name="init">
+		<mkdir dir="bin"/>
+		<copy includeemptydirs="false" todir="bin">
+			<fileset dir="src">
+				<exclude name="**/*.launch"/>
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>
+	<target name="clean">
+		<delete dir="bin"/>
+	</target>
+	<target depends="clean" name="cleanall"/>
+	<target depends="build-subprojects,build-project" name="build"/>
+	<target name="build-subprojects"/>
+	<target depends="init" name="build-project">
+		<echo message="${ant.project.name}: ${ant.file}"/>
+		<javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+			<src path="src"/>
+			<classpath refid="HbaseQuery.classpath"/>
+		</javac>
+	</target>
+	<target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+	<target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+		<copy todir="${ant.library.dir}">
+			<fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+		</copy>
+		<unzip dest="${ant.library.dir}">
+			<patternset includes="jdtCompilerAdapter.jar"/>
+			<fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+		</unzip>
+	</target>
+	<target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+		<property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+		<antcall target="build"/>
+	</target>
+	<target name="jar" depends="build">
+		<pathconvert property="libs.project" pathsep=" ">
+			<mapper>
+				<chainedmapper>
+					<!-- remove absolute path -->
+					<flattenmapper />
+					<!-- add lib/ prefix -->
+					<!--
+              	              	              						<globmapper from="*" to="lib/*" />
+              	              	              						-->
+					<globmapper from="*" to="*" />
+				</chainedmapper>
+			</mapper>
+			<path>
+				<!-- lib.home contains all jar files, in several subdirectories -->
+				<fileset dir="lib">
+					<include name="**/*.jar" />
+				</fileset>
+				<fileset dir="hbase_std_lib">
+					<include name="**/*.jar" />
+				</fileset>
+			</path>
+		</pathconvert>
+		<delete file="F:/HbaseQuery.jar" />
+		<jar jarfile="F:/HbaseQuery.jar">
+			<!-- define MANIFEST.MF -->
+			<manifest>
+
+				<!-- finally, use the magically generated libs path -->
+				<attribute name="Class-Path" value="${libs.project}" />
+			</manifest>
+			<zipgroupfileset dir="lib" includes="*.jar" />
+			<zipgroupfileset dir="hbase_std_lib" includes="*.jar" />
+			<fileset dir="bin" includes="**/*.*" />
+		</jar>
+	</target>
+	<target name="GetTime">
+		<java classname="cn.clickwise.ghh.lib.GetTime" failonerror="true" fork="yes">
+			<classpath refid="HbaseQuery.classpath"/>
+		</java>
+	</target>
+	<target name="QueryHbase">
+		<java classname="cn.clickwise.server.QueryHbase" failonerror="true" fork="yes">
+			<classpath refid="HbaseQuery.classpath"/>
+		</java>
+	</target>
+	<target name="Test">
+		<java classname="cn.clickwise.ghh.lib.hbase.Test" failonerror="true" fork="yes">
+			<classpath refid="HbaseQuery.classpath"/>
+		</java>
+	</target>
+	<target name="XmlTool">
+		<java classname="cn.clickwise.ghh.lib.dom.XmlTool" failonerror="true" fork="yes">
+			<classpath refid="HbaseQuery.classpath"/>
+		</java>
+	</target>
+</project>
